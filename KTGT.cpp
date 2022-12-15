@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <string.h>
 using namespace std;
 
 struct list {
@@ -91,7 +92,8 @@ void input(list sv[], int& n) {
 		cout << "Nhap MSSV: ";
 		cin >> sv[i].mssv;
 		cout << "Nhap Ten SV: ";
-		cin >> sv[i].tsv;
+		cin.ignore();
+		getline(cin,sv[i].tsv);
 		cout << "Nhap Tuoi: ";
 		cin >> sv[i].tuoi;
 		cout << "Nhap gioi tinh: ";
